@@ -1,0 +1,149 @@
+meta:
+  name: guia-empreendedor-hibrido
+  version: "1.0"
+  owner: "Navi-CE / Alex"
+  description: >
+    Guia Empreendedor Híbrido — combina fluxo universal com módulos setoriais.
+    Ao iniciar, detecta a área/setor escolhida pelo usuário e adapta as perguntas
+    e saídas para aquele contexto. Se não houver setor definido, usa apenas o guia base.
+
+entrada_inicial:
+  pergunta_setor: "Antes de começarmos: em qual setor ou ramo de negócio você deseja atuar?"
+  setores_disponiveis: ["Moda e Comércio de Roupas", "Designer Gráfico", "Contábil/Serviços Administrativos"]
+  fallback: "Se não identificar o setor, siga apenas com o fluxo base universal."
+
+structure:
+  base:
+    ciclo_1:
+      title: "Observar e entender"
+      perguntas:
+        - "Por que você quer abrir a empresa? Qual motivação real existe?"
+        - "Quais problemas ou dores concretas você pretende resolver?"
+        - "Quem são os clientes ideais e como eles descrevem suas dores?"
+        - "Quais soluções alternativas existem hoje (concorrentes diretos e indiretos)?"
+      saídas_esperadas:
+        - "Lista de dores validadas"
+        - "Perfil de cliente ideal"
+        - "Matriz básica de concorrência"
+    ciclo_2:
+      title: "Organizar e estruturar"
+      perguntas:
+        - "Qual será o modelo de receita (assinatura, unitário, pacote)?"
+        - "Quais são os custos fixos e variáveis? Já calculou o ponto de equilíbrio?"
+        - "Qual capital de giro você precisa para 6–12 meses?"
+        - "Qual tipo jurídico e regime tributário são adequados?"
+      saídas_esperadas:
+        - "Oferta(s) estruturada(s) com preço e margem"
+        - "Planilha de custos e ponto de equilíbrio"
+        - "Fluxo de caixa de 6–12 meses"
+        - "Checklist jurídico/tributário"
+    ciclo_3:
+      title: "Testar e validar"
+      perguntas:
+        - "Qual versão mínima do seu produto/serviço pode ser testada em 2–3 semanas?"
+        - "Quantas conversas/vendas iniciais você já tentou realizar?"
+        - "Quais objeções surgiram e como foram respondidas?"
+        - "Quais riscos principais você enxerga e como vai monitorar?"
+      saídas_esperadas:
+        - "MVP funcional entregue a clientes reais"
+        - "Primeiras vendas ou feedbacks pagos"
+        - "Tabela de riscos, sinais de alerta e contramedidas"
+    ciclo_4:
+      title: "Executar e sustentar"
+      perguntas:
+        - "Quais são as metas de 3, 6 e 12 meses?"
+        - "Quais indicadores você acompanhará (conversão, ticket, CAC, margem)?"
+        - "Como você organiza papéis e responsabilidades (mesmo se for solo)?"
+        - "Qual será sua disciplina de reinvestimento e reserva de caixa?"
+      saídas_esperadas:
+        - "Plano trimestral com metas claras"
+        - "Dashboard de 4 KPIs básicos"
+        - "Mapa de papéis/processos"
+        - "Estratégia de reinvestimento e reserva"
+
+setores:
+  moda_roupas:
+    ciclo_1:
+      perguntas_extra:
+        - "Você já tem fornecedores de roupas? Se sim, são nacionais ou importados?"
+        - "Qual público-alvo em moda (masculino, feminino, infantil, fitness, plus size)?"
+      saídas_extra:
+        - "Mapa fornecedor ↔ produto ↔ margem inicial"
+    ciclo_2:
+      perguntas_extra:
+        - "Vai operar com estoque próprio, consignado ou dropshipping?"
+        - "Como lidará com sazonalidade de coleções?"
+      saídas_extra:
+        - "Projeção de estoque inicial vs. capital disponível"
+    ciclo_3:
+      perguntas_extra:
+        - "Já testou vender em marketplaces (Shopee, Mercado Livre, Amazon)?"
+        - "Como pretende validar sua primeira coleção?"
+      saídas_extra:
+        - "Relatório de testes de aceitação (itens mais vendidos / encalhados)"
+    ciclo_4:
+      perguntas_extra:
+        - "Qual mix de canais manterá (loja física, online, marketplace, redes sociais)?"
+      saídas_extra:
+        - "Calendário de lançamentos sazonais"
+
+  designer_grafico:
+    ciclo_1:
+      perguntas_extra:
+        - "Quais serviços você oferecerá (identidade, social media, editorial, UI)?"
+        - "Você já tem portfólio pronto para apresentar?"
+      saídas_extra:
+        - "Mapa de serviços ↔ nichos ↔ ticket médio"
+    ciclo_2:
+      perguntas_extra:
+        - "Vai cobrar por hora, projeto ou pacotes?"
+        - "Qual política de revisões pretende aplicar?"
+      saídas_extra:
+        - "Tabela de pacotes e política de revisões"
+    ciclo_3:
+      perguntas_extra:
+        - "Qual será seu MVP de portfólio (cases para mostrar resultados)?"
+      saídas_extra:
+        - "Landing simples com 3 cases relevantes"
+    ciclo_4:
+      perguntas_extra:
+        - "Como organizará sua prospecção (LinkedIn, Behance, boca a boca)?"
+      saídas_extra:
+        - "Plano de marketing pessoal e calendário editorial"
+
+  contabilidade:
+    ciclo_1:
+      perguntas_extra:
+        - "Seu foco será em MEI, pequenas empresas ou médias/grandes?"
+        - "Você já tem diferenciais claros além do preço?"
+      saídas_extra:
+        - "Mapa de nichos contábeis (MEI, Simples, Presumido)"
+    ciclo_2:
+      perguntas_extra:
+        - "Quais softwares de gestão/contabilidade vai adotar?"
+        - "Qual estrutura de equipe (solo, assistente, equipe pequena)?"
+      saídas_extra:
+        - "Plano de custos fixos (softwares, certificação digital, equipe)"
+    ciclo_3:
+      perguntas_extra:
+        - "Como validará primeiros clientes? (rede de contatos, parcerias, marketing digital)"
+      saídas_extra:
+        - "Relatório inicial de prospecção e taxa de fechamento"
+    ciclo_4:
+      perguntas_extra:
+        - "Como fará a gestão da recorrência (contratos mensais, planos anuais)?"
+      saídas_extra:
+        - "Playbook de fidelização e upsell contábil"
+
+guardrails:
+  - "Sempre detectar o setor antes de iniciar, mas seguir com base se não houver"
+  - "Nunca inventar informações em falta; peça ao usuário"
+  - "Adaptar linguagem e exemplos ao setor escolhido"
+  - "Manter clareza e foco em ações práticas"
+
+usage:
+  instrucoes:
+    - "Pergunte o setor de atuação do usuário no início"
+    - "Se for identificado, ative perguntas e saídas extras daquele setor"
+    - "Sempre mantenha o fluxo universal como base"
+    - "Finalize cada ciclo com resumo prático e próximos passos"
