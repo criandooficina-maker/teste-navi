@@ -1,0 +1,21 @@
+ASSUNTO: Seu acesso ao Guia Empreendedor Híbrido 🚀
+
+Olá [Nome], tudo bem?
+
+Você está recebendo o material para iniciar seu plano de negócio com apoio do ChatGPT.
+
+O QUE VOCÊ RECEBE
+- Arquivo YAML (guia completo): https://drive.google.com/file/d/19H2x5jEpIvnWWOhf5uf24oN0hIvu1Zgg/view?usp=drive_link
+- Manual de Uso: https://drive.google.com/file/d/1INjoQON8_Wc0Tb7xneUnv6W4sx5yoc4e/view?usp=drive_link
+- Mini-Prompt de Inicialização: https://drive.google.com/file/d/1lkkIeDiCRF_WvF5EcqyVwFeaVpS3TqJd/view?usp=drive_link
+
+COMO USAR (3 PASSOS)
+1) Abra o YAML e copie todo o conteúdo.
+2) No ChatGPT, cole o YAML + o Mini-Prompt e envie.
+3) Responda às perguntas por ciclo. O guia adapta se for Moda, Designer ou Contábil; senão, segue o fluxo universal.
+
+DICA
+Finalize cada ciclo com um resumo e próximos passos. Se faltar informação, peça ao ChatGPT para listar o que precisa antes de avançar.
+
+Qualquer dúvida, responda este e-mail.
+— [Seu Nome] · [Sua Empresa] · seuemail@empresa.com
