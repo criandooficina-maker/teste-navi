@@ -1,0 +1,24 @@
+name: Changelog reminder
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verificar se CHANGELOG foi alterado
+        id: diff
+        run: |
+          git fetch origin ${{ github.base_ref }} --depth=1
+          CHANGED=$(git diff --name-only HEAD origin/${{ github.base_ref }})
+          echo "$CHANGED" | grep -q "CHANGELOG.md" && echo "has_changelog=true" >> $GITHUB_OUTPUT || echo "has_changelog=false" >> $GITHUB_OUTPUT
+      - name: Comentar se faltar CHANGELOG
+        if: steps.diff.outputs.has_changelog == 'false'
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: "⚠️ Lembrete: você alterou conteúdo mas não atualizou o **CHANGELOG.md**."
